@@ -1,0 +1,95 @@
+/* Basic styling for the navbar */
+.navbar {
+    background-color: #91cf5f;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .navbar-logo a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .navbar-links ul li {
+    margin-right: 20px;
+  }
+  
+  .navbar-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .navbar-links ul li a:hover {
+    color: #f39c12;
+  }
+  
+  /* Hamburger icon for mobile view */
+  .navbar-hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    justify-content: space-between;
+  }
+  
+  .navbar-hamburger .bar {
+    height: 5px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .navbar-links {
+      display: none;
+    }
+  
+    .navbar-links.active {
+      display: block;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .navbar-links ul {
+      display: block;
+      padding: 20px 0;
+    }
+  
+    .navbar-links ul li {
+      margin: 10px 0;
+    }
+  
+    .navbar-hamburger {
+      display: flex;
+    }
+  }
+  
